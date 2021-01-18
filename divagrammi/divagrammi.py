@@ -35,7 +35,6 @@ with open("dannie.txt","r") as f:
         strs.append(line[0:n].strip())
         ints.append(int(line[n+1:len(line)].strip()))
 
-title = "Survey of where is Python used."
 explode = (0.07,0,0,0,0)
 plt.grid(True)
 
