@@ -35,10 +35,15 @@ with open("dannie.txt","r") as f:
         strs.append(line[0:n].strip())
         ints.append(int(line[n+1:len(line)].strip()))
 
-title = "Данные о ИТ безопасности"
+title = "Survey of where is Python used."
+explode = (0.07,0,0,0,0)
 plt.grid(True)
 
-color_rectangle = np.random.rand(7, 3)
-plt.barh(strs, ints, color=color_rectangle)
+ax = plt.subplot()
+wedges, texts, autotexts = ax.pie(ints, explode=explode, autopct='%1.1f%%',pctdistance=1.13)
+ax.set_title("What operating systems Python programmers use.")
+plt.axis('equal')
+plt.tight_layout()
+plt.legend(wedges, strs, loc='center left')
 
 plt.show()
