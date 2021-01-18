@@ -25,7 +25,7 @@ plt.title("Зонтик")
 plt.tick_params(axis="x", direction="in",length=5, width=5,color="red",labelsize=7)
 plt.grid(True)
 plt.plot(x,y,x1,y1,x2,y2,x3,y3,x4,y4,x5,y5 ,'-r',linewidth=5)
-plt.show
+plt.show()
 #-----------------------------------------------------------------------------------------
 with open("dannie.txt","r") as f:
     strs=[]
